@@ -1,16 +1,20 @@
 package com.javaex.practice;
 
+
 public class Ex03 {
-	//다음 코드는 오류가 있습니다. 오류의 내용을 찾고 올바르게 수정하여 코딩해 보세요.
 	public static void main(String[] args) {
-	
-		int age = 15;
-		
-		//age가 0살 초과이고 18살 미만이면 
-		if(0 < age && age < 18 ) {
-			System.out.println("청소년 입니다.");
-		}
+		//아래의 출력결과를 예상하여 작성하세요 코드를 작성해서 예상과 맞는지 확인해 보세요
+		//*** (몰랐는데 디버그 돌려봄 완전히 이해하진 못함 연산 부호 미숙)
+		//***
+		//***
+		//***
+			int x, y;
+			for(x=0; x<4; x++) {
+				for(y=2; y>=0; y--) {
+					System.out.print("*");
+				}
+				System.out.println(""); //줄바꿈
+			}	
 
 	}
-
 }

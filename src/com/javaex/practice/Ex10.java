@@ -1,33 +1,32 @@
 package com.javaex.practice;
 
+
 import java.util.Scanner;
 
 public class Ex10 {
-
 	public static void main(String[] args) {
-	
-		int num; 
-		int num2;
-		Scanner sc = new Scanner(System.in);
-		
-	
-		System.out.println("숫자2개를 입력해주세요");
-		System.out.print("숫자1: ");
-		num = sc.nextInt();
-		System.out.print("숫자2: ");
-		num2 = sc.nextInt();
-		
-		
-		if (num > num2) { 
-			System.out.println("큰수:" + num + "작은수:" + num2);
-		} else if (num < num2) {
-			System.out.println("작은수:" + num + "큰수:" + num2);
-		} else  {
-			System.out.println("같은수입니다");
-		}
-		
-		sc.close();
-
-	}
+		//GPT 참고함 
+		Scanner scanner = new Scanner(System.in);
+        
+        // 사용자로부터 다섯 개의 정수 입력 받기
+        int[] numbers = new int[5]; // 
+        for (int i = 0; i < 5; i++) {
+            System.out.print("정수를 입력하세요: ");
+            numbers[i] = scanner.nextInt();
+        }
+        
+        // 가장 큰 수 찾기
+        int max = numbers[0]; //
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
+        }
+        
+        // 결과 출력
+        System.out.println("최대값은" + " " + max + "입니다.");
+        
+        scanner.close();
+    }
 
 }

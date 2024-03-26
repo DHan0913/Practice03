@@ -1,19 +1,19 @@
 package com.javaex.practice;
 
+
 public class Ex02 {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-//		다음 중 switch 문에서 조건식에 넣을 수 있는 데이터 타입은? 2,3,4,5,9
-//				(1) boolean
-//				(2) char
-//				(3) byte
-//				(4) short
-//				(5) int
-//				(6) long
-//				(7) float
-//				(8) double
-//				(9) String
-	}
-
+		//아래의 출력결과를 예상하여 작성하세요 코드를 작성해서 예상과 맞는지 확인해 보세요
+		//** (몰랐는데 디버그 돌려봄 완전히 이해하진 못함 연산 부호 미숙)
+		//**
+		//**
+		//**	
+			int x, y;
+			for(x=0; x<4; x++) {
+				for(y=0; y < 2; y++) {
+					System.out.print("*");
+				}
+				System.out.println(""); //줄바꿈
+			}
+		}
 }

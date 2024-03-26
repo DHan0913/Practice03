@@ -1,33 +1,57 @@
 package com.javaex.practice;
 
+
 import java.util.Scanner;
+
 
 public class Ex19 {
 
 	public static void main(String[] args) {
-		
-			Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        boolean run = true;
+        int amount =0;
+        
+        
+        while(run){ //while 시작
+            System.out.println("");
+            System.out.println("----------------------------------");
+            System.out.println("1.예금 | 2.출금 | 3.잔고 |4.종료");
+            System.out.println("----------------------------------");
+            System.out.print("선택>");
+            
+            int menuNo = sc.nextInt();
+            
+            switch(menuNo){ //switch 시작
+            
+                case 1:
+                    System.out.print("예금액>");
+                    amount = amount + sc.nextInt();
+                    break;
+                
+                case 2:
+                    System.out.print("출금액>");
+                    amount= amount-sc.nextInt();
+                    break;
+                    
+                case 3:
+                    System.out.print("잔고액>");
+                    System.out.println(amount);
+                    break;
+                
+                case 4:
+                    System.out.print("프로그램 종료");
+                    run = false;
+                    break;
+                    
+                default :
+                    System.out.println("다시입력해주세요");
+                    break;
+                    
+            }//switch 끝
+            
+        }//while 끝
+        sc.close();
 
-		        System.out.println("태어난 년도를 입력하세요: ");
-		        System.out.print("년도:");
-		        int Year = scanner.nextInt();
+	}
 
-		        int Year2 = 2023;
-		        int age = Year2 - Year;
-
-		        if (age < 15 || age >= 65) {
-		            System.out.println(age + "살 무료예방접종 대상자 입니다.");
-		        } else {
-		            System.out.println(age + "살 무료예방접종 대상자가 아닙니다.");
-		        }
-
-		        scanner.close();
-		    
-			}
-
-		
 }
-
-	
-
-

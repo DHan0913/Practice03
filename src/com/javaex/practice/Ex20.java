@@ -1,27 +1,42 @@
 package com.javaex.practice;
 
+
 import java.util.Scanner;
 
 public class Ex20 {
 
 	public static void main(String[] args) {
-		   Scanner scanner = new Scanner(System.in);
-
-	        System.out.println("알파벳 1글자(소문자)를 입력하세요: ");
-	        System.out.print("알파벳:");
-	        char alpha = scanner.next().charAt(0);
-
-	        if (alpha >= 'a' && alpha <= 'z') {
-	            if (alpha == 'a' || alpha == 'e' || alpha == 'i' || alpha == 'o' || alpha == 'u') {
-	                System.out.println("모음입니다.");
-	            } else {
-	                System.out.println("자음입니다.");
-	            
-	       
-
-	        scanner.close();
-	    }
-	            
-	   }
+		int a = (int)(Math.random()*5)+1;
+		System.out.println("================");
+		System.out.println("[숫자맞추기게임 시작]");
+		System.out.println("================");
+		Scanner scanner = new Scanner(System.in);
+		System.out.println(">>");
+		int n = scanner.nextInt();
+		while (true) {
+			if (n==a){
+				System.out.println("맞았습니다");
+				break;
+			} else if (n < a){
+				System.out.println(">>");
+				System.out.println("더 높게");
+				n = scanner.nextInt();
+			} else if (n > a){
+				System.out.println(">>");
+				System.out.println("더 낮게");
+				n = scanner.nextInt();
+			}
+			
+		}
+		System.out.print("게임을 종료하시겠습니까?(y/n) >>");
+		String y;
+		y = scanner.next();
+			if (y == y) {
+				System.out.println("=============");
+				System.out.println("[숫자맞추기 게임 종료]");
+				System.out.println("=============");
+			}
+		
 	}
+
 }

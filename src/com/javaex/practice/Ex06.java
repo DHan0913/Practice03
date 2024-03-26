@@ -1,30 +1,22 @@
 package com.javaex.practice;
 
-import java.util.Scanner;
 
 public class Ex06 {
-	//나이를 입력 받아 19세이상 65세 미만이면 "1번그룹" 그 이외에는 "2번그룹"으로 출력하는 
-	//프로그램을 작성하세요
+
+//1에서 100까지의 수에서 5의배수 이면서 7의 배수인 수를 출력하세요
+
 	public static void main(String[] args) {
 		
-		int age; //나이
-		
-		Scanner sc = new Scanner(System.in);
-		
-		//나이를 입력받는다.
-		System.out.println("나이를 입력해주세요");
-		System.out.print("나이: ");
-		age = sc.nextInt();
-		
-		//그룹을 분류한다.
-		if (age >= 19 && age <65) { 
-			System.out.print("1번그룹 입니다.");
-		} else { 
-			System.out.println("2번그룹 입니다.");
+		for (int i = 1; i <101; i++ ) {
+				if( i % 5 == 0 && i % 7 == 0) {
+					System.out.println(i);
+				}
+				
 		}
+	}		
 		
-		sc.close();
-	}
 
+	
 }
+
 
